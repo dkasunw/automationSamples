@@ -1,9 +1,16 @@
 package org.dharshanaw.samples.microservice.model;
-public class Employee {
+
+import java.io.Serializable;
+
+public class Employee implements Serializable {
 
     public Employee() {
 
     }
+    private Integer id;
+    private String firstName;
+    private String lastName;
+    private String email;
 
     public Employee(Integer id, String firstName, String lastName, String email) {
         super();
@@ -21,10 +28,32 @@ public class Employee {
         this.id = id;
     }
 
-    private Integer id;
-    private String firstName;
-    private String lastName;
-    private String email;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+
 
     //Getters and setters
 
