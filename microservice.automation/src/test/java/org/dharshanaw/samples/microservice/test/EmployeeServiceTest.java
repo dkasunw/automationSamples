@@ -69,12 +69,11 @@ public class EmployeeServiceTest extends AbstractTestNGSpringContextTests {
       //  createTestEmployee("alex");
         mockMvc.perform(get("/employees/").contentType(MediaType.APPLICATION_JSON))
                 .andDo(print())
-                .andExpect(status().isOk());
-//                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-//                .andExpect(jsonPath("$", hasSize(greaterThanOrEqualTo(2))))
-//                .andExpect(jsonPath("$[0].name", is("bob")))
-//                .andExpect(jsonPath("$[1].name", is("alex")));
-        // @formatter:on
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$", hasSize(greaterThanOrEqualTo(2))))
+                .andExpect(jsonPath("$[0].name", is("bob")))
+                .andExpect(jsonPath("$[1].name", is("alex")));
     }
 
     /*  */

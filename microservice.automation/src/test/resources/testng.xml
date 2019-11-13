@@ -3,7 +3,7 @@
 <suite name="API Response Validate Test Site" verbose="1" >
     <test name="API Response Content Validation Test" >
         <classes>
-<!--            <class name="com.evaluation.automation.api.test.APIResponseValidationTest"/>-->
+            <class name="org.dharshanaw.samples.microservice.test.EmployeeServiceTest"/>
         </classes>
     </test>
 </suite>
